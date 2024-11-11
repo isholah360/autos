@@ -1,9 +1,17 @@
 services:
   - type: web
-    name: autos
+    name: your-app-name-frontend
     env: node
     buildCommand: npm run build
-    startCommand: npm start
+    startCommand: npm run start:next
+    envVars:
+      - key: NODE_VERSION
+        value: 16.x
+  - type: web
+    name: your-app-name-backend
+    env: node
+    buildCommand: npm run build
+    startCommand: npm run server
     envVars:
       - key: NODE_VERSION
         value: 16.x

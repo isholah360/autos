@@ -2,14 +2,14 @@
   "name": "autos",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev:next": "next dev",
+ "scripts": {
+    "build": "npm run build:next && npm run build:server",
+    "build:next": "next build",
+    "build:server": "tsc --project server",
     "start:next": "next start",
-    "start": "node index.js",
-    "lint": "next lint",
-    "server": "nodemon server/index.js",
-    "dev": "concurrently \"npm run server\" \" npm run dev:next\" "
+    "start:server": "node server/dist/index.js",
+    "server": "nodemon server/index.ts",
+    "dev": "concurrently \"npm run server\" \"npm run dev:next\""
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
