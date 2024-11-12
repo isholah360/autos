@@ -16,7 +16,7 @@ export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLanguageChange = (lang: string) => {
+  const handleLanguageChange = (lang: "en" | "ar") => { // Explicitly typing lang as 'en' or 'ar'
     setLanguage(lang);
     setIsOpen(false);
   };
@@ -50,7 +50,7 @@ export default function LanguageSwitcher() {
             <div
               key={lang}
               className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${language === lang ? 'bg-gray-50 text-blue-600' : ''}`}
-              onClick={() => handleLanguageChange(lang)}
+              onClick={() => handleLanguageChange(lang)} // Now `lang` is typed correctly
               style={{
                 direction: lang === 'ar' ? 'rtl' : 'ltr',
               }}
