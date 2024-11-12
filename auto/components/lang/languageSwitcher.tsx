@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useLanguage } from "../context/language-context";
-import { languages } from "../context/settings";
+import { languages } from "../context/settings"; // Importing correctly
 import { CiGlobe } from "react-icons/ci";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
@@ -35,9 +35,7 @@ export default function LanguageSwitcher() {
         <CiGlobe className="text-md" />
         <span>{getCurrentLanguageName()}</span>
         <MdOutlineKeyboardArrowDown 
-          className={`text-lg transition-transform duration-200 ${
-            isOpen ? 'rotate-180' : ''
-          }`}
+          className={`text-lg transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
         />
       </div>
 
@@ -51,9 +49,7 @@ export default function LanguageSwitcher() {
           {languages.map((lang) => (
             <div
               key={lang}
-              className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${
-                language === lang ? 'bg-gray-50 text-blue-600' : ''
-              }`}
+              className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${language === lang ? 'bg-gray-50 text-blue-600' : ''}`}
               onClick={() => handleLanguageChange(lang)}
               style={{
                 direction: lang === 'ar' ? 'rtl' : 'ltr',
@@ -75,7 +71,3 @@ export default function LanguageSwitcher() {
     </div>
   );
 }
-
-// File: context/settings.ts
-export const languages = ['en', 'ar'] as const;
-export type Language = (typeof languages)[number];
