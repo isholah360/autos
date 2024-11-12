@@ -17,7 +17,6 @@ export default function Home() {
       <nav>
         <ul>
           <li>{translations[language].about}</li>
-          <li>{translations[language].contact}</li>
         </ul>
       </nav>
       <LanguageSwitcher/>
