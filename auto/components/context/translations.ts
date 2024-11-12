@@ -1,3 +1,44 @@
+type TranslationKeys = {
+  welcome: string;
+  description: string;
+  discoverOfferings: string;
+  learnMore: string;
+  experienceService: string;
+  contactUs: string;
+  discoverMore: string;
+  bookService: string;
+  bookonline: string;
+  ToyotaLexus: string;
+  Owner: string;
+  shoppingtools: string;
+  news: string;
+  about: string;
+  orderOnline: string;
+  warranty: string;
+  peroidic: string;
+  dashboardInd: string;
+  barSearch: string;
+  lease: string;
+  cash: string;
+  vehicleInfo: string;
+  brand: string;
+  fname: string;
+  lname: string;
+  email: string;
+  phone: string;
+  address: string;
+  grade: string;
+  ContactInformation: string;
+  pleasadd: string;
+  downloadDailyReport: string;
+  downloadReport: string;
+};
+
+type Translations = {
+  [languageCode: string]: TranslationKeys;
+};
+
+
 export const translations = {
   en: {
     welcome: "Welcome to our website",
