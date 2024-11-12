@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 const authRoutes = require("./router/authRoutes");
 const customerRoute = require("./router/customerRoute");
 
+
 const cookieParser = require("cookie-parser");
 const next = require("next");
 const path = require("path");

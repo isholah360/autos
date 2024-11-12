@@ -4,7 +4,7 @@
   "private": true,
 "scripts": { 
 "dev": "concurrently \"npm run dev:next\" \"npm run dev:express\"", 
-"build": "npm run build:next", 
+"build": "npm install && npm install --prefix auto && npm run build --prefix auto",
 "start": "npm run start:next && npm run start:express", 
 
 "dev:next": "cd auto && npm run dev", 
